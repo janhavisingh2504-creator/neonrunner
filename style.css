@@ -1,0 +1,581 @@
+/* ================================
+   NEON RUNNER - MAIN STYLES
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #09001f,
+        #160044,
+        #001b3d
+    );
+
+    color: white;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow-x: hidden;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.game-container {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 450px;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+
+/* ================================
+   START MENU
+================================ */
+
+#startScreen {
+
+    width: 100%;
+
+    padding: 30px 25px;
+
+    background: #0a0523;
+
+    border: 2px solid #7c5cff;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 30px rgba(
+            124,
+            92,
+            255,
+            0.7
+        );
+
+    text-align: center;
+}
+
+
+.game-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+#startScreen h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+
+    letter-spacing: 3px;
+}
+
+
+#startScreen p {
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+    opacity: 0.8;
+}
+
+
+.menu-best {
+
+    font-size: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+#playButton {
+
+    display: block;
+
+    width: 80%;
+
+    margin: auto;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #7c5cff;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 20px rgba(
+            124,
+            92,
+            255,
+            0.6
+        );
+}
+
+
+#playButton:hover {
+
+    transform: scale(1.05);
+}
+
+
+#startScreen small {
+
+    display: block;
+
+    margin-top: 20px;
+
+    opacity: 0.6;
+}
+
+
+/* ================================
+   GAME UI
+================================ */
+
+#gameUI {
+
+    display: none;
+
+    width: 100%;
+
+    position: relative;
+}
+
+
+h1 {
+
+    margin-bottom: 10px;
+
+    font-size: 28px;
+}
+
+
+.high-score {
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+
+.score {
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+
+.lives {
+
+    font-size: 18px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   GAME CANVAS
+================================ */
+
+canvas {
+
+    background: #111;
+
+    border-radius: 15px;
+
+    width: 100%;
+
+    max-width: 400px;
+
+    height: auto;
+
+    display: block;
+
+    margin: auto;
+
+    box-shadow:
+        0 0 30px rgba(
+            120,
+            80,
+            255,
+            0.5
+        );
+}
+
+
+/* ================================
+   OLD START BUTTON
+================================ */
+
+#startButton {
+
+    display: none;
+}
+
+
+/* ================================
+   PAUSE BUTTON
+================================ */
+
+#pauseButton {
+
+    margin-top: 10px;
+
+    padding: 10px 25px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: #29204f;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 12px rgba(
+            124,
+            92,
+            255,
+            0.5
+        );
+
+    user-select: none;
+
+    -webkit-tap-highlight-color:
+        transparent;
+}
+
+
+#pauseButton:active {
+
+    transform: scale(0.95);
+}
+
+
+/* ================================
+   PAUSE OVERLAY
+================================ */
+
+#pauseOverlay {
+
+    display: none;
+
+    position: absolute;
+
+    top: 105px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(400px, 100%);
+
+    height: 600px;
+
+    background:
+        rgba(
+            10,
+            5,
+            35,
+            0.92
+        );
+
+    border-radius: 15px;
+
+    z-index: 100;
+
+    text-align: center;
+
+    padding-top: 220px;
+
+    pointer-events: none;
+}
+
+
+.pause-icon {
+
+    font-size: 50px;
+
+    margin-bottom: 10px;
+}
+
+
+#pauseOverlay h2 {
+
+    font-size: 28px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+
+#pauseOverlay p {
+
+    font-size: 14px;
+
+    opacity: 0.7;
+}
+
+
+/* ================================
+   MOBILE CONTROLS
+================================ */
+
+.mobile-controls {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+
+.mobile-controls button {
+
+    width: 65px;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #29204f;
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 12px rgba(
+            124,
+            92,
+            255,
+            0.5
+        );
+
+    user-select: none;
+
+    -webkit-tap-highlight-color:
+        transparent;
+}
+
+
+.mobile-controls button:active {
+
+    transform: scale(0.9);
+}
+
+
+/* ================================
+   GAME OVER SCREEN
+================================ */
+
+#gameOverScreen {
+
+    display: none;
+
+    position: absolute;
+
+    top: 105px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(400px, 100%);
+
+    height: 600px;
+
+    background:
+        rgba(
+            10,
+            5,
+            35,
+            0.97
+        );
+
+    border: 2px solid #ff4dff;
+
+    border-radius: 15px;
+
+    z-index: 200;
+
+    text-align: center;
+
+    padding-top: 150px;
+
+    box-shadow:
+        0 0 30px rgba(
+            255,
+            77,
+            255,
+            0.7
+        );
+}
+
+
+.game-over-icon {
+
+    font-size: 60px;
+
+    margin-bottom: 10px;
+}
+
+
+#gameOverScreen h2 {
+
+    font-size: 32px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+
+#gameOverScreen p {
+
+    font-size: 14px;
+
+    opacity: 0.7;
+
+    margin-bottom: 25px;
+}
+
+
+.final-score,
+.final-best {
+
+    font-size: 20px;
+
+    margin: 12px 0;
+}
+
+
+#playAgainButton {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 14px 35px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #7c5cff;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 20px rgba(
+            124,
+            92,
+            255,
+            0.7
+        );
+}
+
+
+#playAgainButton:hover {
+
+    transform: scale(1.05);
+}
+
+
+#playAgainButton:active {
+
+    transform: scale(0.95);
+}
+
+
+/* ================================
+   MOBILE SCREEN
+================================ */
+
+@media (max-width: 500px) {
+
+    .game-container {
+
+        padding: 15px;
+    }
+
+    h1 {
+
+        font-size: 24px;
+    }
+
+    #startScreen h2 {
+
+        font-size: 28px;
+    }
+
+    #pauseOverlay {
+
+        width: calc(100% - 30px);
+    }
+
+    #gameOverScreen {
+
+        width: calc(100% - 30px);
+    }
+}

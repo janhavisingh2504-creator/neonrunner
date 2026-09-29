@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Neon Runner</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <!-- =========================
+             START MENU
+        ========================== -->
+
+        <div id="startScreen">
+
+            <div class="game-icon">
+                🏃
+            </div>
+
+            <h2>
+                NEON RUNNER
+            </h2>
+
+            <p>
+                DODGE • RUN • SURVIVE
+            </p>
+
+            <div class="menu-best">
+
+                🏆 BEST:
+                <span id="menuHighScore">
+                    0
+                </span>
+
+            </div>
+
+            <button id="playButton">
+                ▶ PLAY
+            </button>
+
+            <small>
+                Swipe or use the buttons to move
+            </small>
+
+        </div>
+
+
+        <!-- =========================
+             GAME UI
+        ========================== -->
+
+        <div id="gameUI">
+
+            <h1>
+                🏃 Neon Runner
+            </h1>
+
+            <div class="high-score">
+
+                🏆 Best:
+                <span id="highScore">
+                    0
+                </span>
+
+            </div>
+
+            <div class="score">
+
+                Score:
+                <span id="score">
+                    0
+                </span>
+
+            </div>
+
+            <div class="lives">
+
+                Lives:
+                <span id="lives">
+                    ❤️❤️❤️
+                </span>
+
+            </div>
+
+
+            <!-- GAME CANVAS -->
+
+            <canvas
+                id="gameCanvas"
+                width="400"
+                height="600">
+            </canvas>
+
+
+            <!-- =========================
+                 PAUSE OVERLAY
+            ========================== -->
+
+            <div id="pauseOverlay">
+
+                <div class="pause-icon">
+                    ⏸
+                </div>
+
+                <h2>
+                    PAUSED
+                </h2>
+
+                <p>
+                    Press RESUME to continue
+                </p>
+
+            </div>
+
+
+            <!-- PAUSE BUTTON -->
+
+            <button id="pauseButton">
+                ⏸ PAUSE
+            </button>
+
+
+            <!-- OLD RESTART BUTTON -->
+
+            <button id="startButton">
+                Start Game
+            </button>
+
+
+            <!-- =========================
+                 MOBILE CONTROLS
+            ========================== -->
+
+            <div class="mobile-controls">
+
+                <button id="leftButton">
+                    ⬅️
+                </button>
+
+                <button id="jumpButton">
+                    ⬆️
+                </button>
+
+                <button id="rightButton">
+                    ➡️
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 GAME OVER SCREEN
+            ========================== -->
+
+            <div id="gameOverScreen">
+
+                <div class="game-over-icon">
+                    💀
+                </div>
+
+                <h2>
+                    GAME OVER
+                </h2>
+
+                <p>
+                    You survived the neon run!
+                </p>
+
+                <div class="final-score">
+
+                    Score:
+                    <span id="finalScore">
+                        0
+                    </span>
+
+                </div>
+
+                <div class="final-best">
+
+                    🏆 Best:
+                    <span id="finalBestScore">
+                        0
+                    </span>
+
+                </div>
+
+                <button id="playAgainButton">
+                    🔄 PLAY AGAIN
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="game.js"></script>
+
+</body>
+
+</html>
